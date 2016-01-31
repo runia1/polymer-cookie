@@ -155,11 +155,13 @@ the `value` attribute or explicitely calling the `save` method.
       
       /**
        * Deletes the cookie.
+       * Sets value property to empty. notify: true, so two way binding occurs.
        *
        * @method deleteCookie
        */
       deleteCookie: function() {
         this.expires = EXPIRE_NOW;
+        this.value = '';
       },
 
       _prepareProperties: function() {
